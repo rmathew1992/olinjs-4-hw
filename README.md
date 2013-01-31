@@ -15,6 +15,7 @@ Paul and David are going to Twitter next year. Let's see just how easy it is to 
 
 * Fork this repo to your own account
 * Generate an Express app
+* `npm install` all the packages you think you'll need and add them to your `package.json` file
 * Create an app that has the following routes
   * GET `/` => shows a list of all the recent tweets. This page uses the javascript `setTimeout` to poll for new tweets every 2 seconds. This means that new tweets should stream in without having to refresh the page.
   * GET `/users/new` => shows a form that allows someone to input in a name for their user account. When they hit submit it should POST to `/users/new`, create a new user, and redirect to `/users/:user`
