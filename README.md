@@ -74,7 +74,7 @@ var alertMsg = function(){ alert('im cooool'); };
 setInterval(alertMsg, 1000);
 ```
 
-`setInteval` takes a function to execute as it's first parameter and the interval to execute it at (in ms) as it's second parameter. 
+`setInterval` takes a function to execute as it's first parameter and the interval to execute it at (in ms) as it's second parameter. 
 
 Check out [this article on javascript timing](http://www.w3schools.com/js/js_timing.asp) for more details on how `setInterval` works.
 
@@ -85,7 +85,7 @@ Paul and David are going to Twitter next year. Let's see just how easy it is to 
 * Generate an Express app
 * `npm install` all the packages you think you'll need and add them to your `package.json` file
 * Create an app that has the following routes
-  * GET `/` => shows a list of all the recent tweets. This page uses the javascript `setTimeout` to poll for new tweets every 2 seconds. This means that new tweets should stream in without having to refresh the page.
+  * GET `/` => shows a list of all the recent tweets. This page uses the javascript `setInterval` to poll for new tweets every 2 seconds. This means that new tweets should stream in without having to refresh the page.
   * GET `/users/new` => shows a form that allows someone to input in a name for their user account. When they hit submit it should POST to `/users/new`. If a user with that name doesn't exist, it should create a new user, and redirect to `/users/:user`. If a user with that name exists, it should log them in (with sessions).
   * GET `/users/:user` => shows the user a list of their tweets. If the user is logged in, it also shows a form that they can use to create a new tweet. When they hit the "tweet" button it should POST to `/tweets/:user` via an AJAX $.post call, if that post is successful, this tweet should also show up on their list of tweets without them refreshing the page. If that tweet fails (as in it's longer than 140 characters), an error message should be displayed to the user. 
   * Do some funky CSS stuff so that the pages look like the following (Don't use Twitter Bootstrap. That's cheating.)
