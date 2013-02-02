@@ -85,9 +85,12 @@ Paul and David are going to Twitter next year. Let's see just how easy it is to 
 * Generate an Express app
 * `npm install` all the packages you think you'll need and add them to your `package.json` file
 * Create an app that has the following routes
-  * GET `/` => shows a list of all the recent tweets. This page uses the javascript `setInterval` to poll for new tweets every 2 seconds. This means that new tweets should stream in without having to refresh the page.
-  * GET `/users/new` => shows a form that allows someone to input in a name for their user account. When they hit submit it should POST to `/users/new`. If a user with that name doesn't exist, it should create a new user, and redirect to `/users/:user`. If a user with that name exists, it should log them in (with sessions).
-  * GET `/users/:user` => shows the user a list of their tweets. If the user is logged in, it also shows a form that they can use to create a new tweet. When they hit the "tweet" button it should POST to `/tweets/:user` via an AJAX $.post call, if that post is successful, this tweet should also show up on their list of tweets without them refreshing the page. If that tweet fails (as in it's longer than 140 characters), an error message should be displayed to the user. 
-  * Do some funky CSS stuff so that the pages look like the following (Don't use Twitter Bootstrap. That's cheating.)
+  
+  * GET `/users/new` => shows a form that allows someone to input in a name for their user account. When they hit submit it should POST to `/users/new`. If a user with that name doesn't exist, it should create a new user, and  to `/`, with them logged in. If a user with that name exists, it should just log them in (with sessions), then redirect to '/'. 
+  * GET `/` => shows a list of all the recent tweets. This page should use the javascript `setInterval` to poll for new tweets every 2 seconds. This means that new tweets should stream in without having to refresh the page. If a user is logged in it should also have a compose tweet box which allows that user to send tweets. When they hit the "tweet" button it should POST to `/tweets/:user` via an AJAX $.post call, if that post is successful, this tweet should also show up on their list of tweets without them refreshing the page. If that tweet fails (as in it's longer than 140 characters), an error message should be displayed to the user. 
+
+  * Then do some funky CSS stuff so that the "/" page looks like the following (Don't use Twitter Bootstrap. That's cheating.)
+  
+  ![crappy twitter](https://github.com/olinjs/olinjs-4-hw/blob/master/annoted_crappy_twitter%20copy.png?raw=true)  
 * Create a Heroku `Procfile` like the one we made for you in previous homeworks
 * Push to Heroku and add the url to the [homework sheet](https://docs.google.com/spreadsheet/ccc?key=0AjqGw-pw5UuudFhQSmJhZlRZWEhRTWcwYmxBVld6c1E#gid=3)
