@@ -92,5 +92,8 @@ Paul and David are going to Twitter next year. Let's see just how easy it is to 
   * Then do some funky CSS stuff so that the "/" page looks like the following (Don't use Twitter Bootstrap. That's cheating.)
   
   ![crappy twitter](https://github.com/olinjs/olinjs-4-hw/blob/master/annoted_crappy_twitter%20copy.png?raw=true)  
+
+  Do your best to make the page look exactly like this. I know it's not beautiful, but the point is to practice precision css. One skill that you'll use often in industry is looking at a n image and turning that into css.The login page, however, can look however you want it to look.
+  
 * Create a Heroku `Procfile` like the one we made for you in previous homeworks
 * Push to Heroku and add the url to the [homework sheet](https://docs.google.com/spreadsheet/ccc?key=0AjqGw-pw5UuudFhQSmJhZlRZWEhRTWcwYmxBVld6c1E#gid=3)
