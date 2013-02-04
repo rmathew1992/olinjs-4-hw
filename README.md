@@ -49,7 +49,7 @@ Alright, now that we've set up our session, we want to be able to store stuff in
 app.post('/login', function (req, res){
   user = new User
   user.save(function (){
-    req.sessions.user = user;
+    req.session.user = user;
   });
 })
 ```
