@@ -58,7 +58,7 @@ Now if the user goes to another page, we can just get the same user from our `re
 
 ```js
 app.get('/mystuff', function(req, res){
-  var user = req.sessions.user;
+  var user = req.session.user;
   // do stuff here
 });
 ```
