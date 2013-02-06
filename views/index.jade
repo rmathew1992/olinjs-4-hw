@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div(id="title")
+    h1= title
+  div(id="container")
+    div(id="leftNav")
+      form(method='post', action='/tweets', id="composeTweetForm")
+        input(type="hidden", name="uid", value="#{loggedIn._id}", id="uid")
+        div(id="composition")
+          div(id="composePrompt")
+            | Compose a twit as #{loggedIn.name}
+          div(id="textInput")
+            input(name='text', id="tweetInput")
+        div(id="button")
+          button('type='submit' id="submitButton")
+            | Done
+    div(id="twStream")
+      div(id="twHeader")
+        h2 All the twits ever made
+      div(id="StreamBody")
+        include _twits
